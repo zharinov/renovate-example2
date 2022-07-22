@@ -1,6 +1,6 @@
 # renovate-example2
 
-reproduction repo for discussion issue renovatebot/renovate#16176
+reproduction repo for discussion issue renovatebot/renovate#16708
 
 This is an example repo to reproduce the following issue:
 
