@@ -13,7 +13,7 @@
         "GRPC_FULL_VERSION_BY_RELEASE=\\$\\{GRPC_FULL_VERSION_BY_RELEASE:-(?<currentValue>.*?)\\}\\n"
       ],
       "depNameTemplate": "grpc/grpc",
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+\\.\\d+)"
     }
   ]
