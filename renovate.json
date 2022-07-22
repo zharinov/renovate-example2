@@ -1,0 +1,42 @@
+{
+  platform: "github",
+  masterIssue: true,
+  baseBranches: [
+    "master"
+  ],
+  extends: [
+    "config:base"
+  ],
+  enabledManagers: ["regex"],
+  regexManagers: [
+    {
+      fileMatch: [
+        "variables.sh$"
+      ],
+      matchStrings: [
+        // named capturing group, must include 'currentValue' as the name
+        "GRPC_VERSION=\\$\\{GRPC_VERSION:-(?<currentValue>.*?)\\}\\n"
+      ],
+      // the name of the dependency in the package manager
+      depNameTemplate: "grpc/grpc",
+      // which package manager should Renovate Bot look to find this dependency?
+      datasourceTemplate: "github-tags",
+      // since we only keep the version up to minor and we do not use the v prefix, we need to extract major.minor from the fetched new version
+      extractVersionTemplate: "^v(?<version>\\d+\\.\\d+)\\.\\d+",
+      // by default versioningTemplate is semvar, but since we have the v prefix, we need to use a regex to specify the type of the version.
+      versioningTemplate: "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
+    },
+    {
+      fileMatch: [
+        "variables.sh$"
+      ],
+      matchStrings: [
+        "GRPC_JAVA_VERSION=\\$\\{GRPC_JAVA_VERSION:-(?<currentValue>.*?)\\}\\n"
+      ],
+      depNameTemplate: "grpc/grpc-java",
+      datasourceTemplate: "github-releases",
+      extractVersionTemplate: "^v(?<version>\\d+\\.\\d+)\\.\\d+",
+      versioningTemplate: "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
+    }
+  ]
+}
