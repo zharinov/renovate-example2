@@ -10,60 +10,12 @@
         "variables.sh$"
       ],
       "matchStrings": [
-        "GRPC_VERSION=\\$\\{GRPC_VERSION:-(?<currentValue>.*?)\\}\\n"
-      ],
-      "depNameTemplate": "grpc/grpc",
-      "datasourceTemplate": "github-tags",
-      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+)\\.\\d+",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$"
-    },
-    {
-      "fileMatch": [
-        "variables.sh$"
-      ],
-      "matchStrings": [
-        "GRPC_FULL_VERSION=\\$\\{GRPC_FULL_VERSION:-(?<currentValue>.*?)\\}\\n"
-      ],
-      "depNameTemplate": "grpc/grpc",
-      "datasourceTemplate": "github-tags",
-      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+\\.\\d+)",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
-    },
-    {
-      "fileMatch": [
-        "variables.sh$"
-      ],
-      "matchStrings": [
-        "GRPC_VERSION_BY_RELEASE=\\$\\{GRPC_VERSION_BY_RELEASE:-(?<currentValue>.*?)\\}\\n"
-      ],
-      "depNameTemplate": "grpc/grpc",
-      "datasourceTemplate": "github-releases",
-      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+)\\.\\d+",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$"
-    },
-    {
-      "fileMatch": [
-        "variables.sh$"
-      ],
-      "matchStrings": [
         "GRPC_FULL_VERSION_BY_RELEASE=\\$\\{GRPC_FULL_VERSION_BY_RELEASE:-(?<currentValue>.*?)\\}\\n"
       ],
       "depNameTemplate": "grpc/grpc",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+\\.\\d+)",
       "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
-    },
-    {
-      "fileMatch": [
-        "variables.sh$"
-      ],
-      "matchStrings": [
-        "GRPC_JAVA_VERSION=\\$\\{GRPC_JAVA_VERSION:-(?<currentValue>.*?)\\}\\n"
-      ],
-      "depNameTemplate": "grpc/grpc-java",
-      "datasourceTemplate": "github-releases",
-      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+)\\.\\d+",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$"
     }
   ]
 }
