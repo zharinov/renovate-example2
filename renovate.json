@@ -27,7 +27,7 @@
       "depNameTemplate": "grpc/grpc",
       "datasourceTemplate": "github-tags",
       "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+\\.\\d+)",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+\\.(?<patch>\\d+)$"
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
     },
     {
       "fileMatch": [
@@ -51,7 +51,7 @@
       "depNameTemplate": "grpc/grpc",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+\\.\\d+)",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+\\.(?<patch>\\d+)$"
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
     },
     {
       "fileMatch": [
