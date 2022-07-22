@@ -1,33 +1,33 @@
 {
-  platform: "github",
-  extends: [
+  "platform": "github",
+  "extends": [
     "config:base"
   ],
-  enabledManagers: ["regex"],
-  regexManagers: [
+  "enabledManagers": ["regex"],
+  "regexManagers": [
     {
-      fileMatch: [
+      "fileMatch": [
         "variables.sh$"
       ],
-      matchStrings: [
+      "matchStrings": [
         "GRPC_VERSION=\\$\\{GRPC_VERSION:-(?<currentValue>.*?)\\}\\n"
       ],
-      depNameTemplate: "grpc/grpc",
-      datasourceTemplate: "github-tags",
-      extractVersionTemplate: "^v(?<version>\\d+\\.\\d+)\\.\\d+",
-      versioningTemplate: "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
+      "depNameTemplate": "grpc/grpc",
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+)\\.\\d+",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
     },
     {
-      fileMatch: [
+      "fileMatch": [
         "variables.sh$"
       ],
-      matchStrings: [
+      "matchStrings": [
         "GRPC_JAVA_VERSION=\\$\\{GRPC_JAVA_VERSION:-(?<currentValue>.*?)\\}\\n"
       ],
-      depNameTemplate: "grpc/grpc-java",
-      datasourceTemplate: "github-releases",
-      extractVersionTemplate: "^v(?<version>\\d+\\.\\d+)\\.\\d+",
-      versioningTemplate: "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
+      "depNameTemplate": "grpc/grpc-java",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+)\\.\\d+",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
     }
   ]
 }
