@@ -14,7 +14,7 @@
       ],
       "depNameTemplate": "grpc/grpc",
       "datasourceTemplate": "github-tags",
-      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+\\.\\d+)"
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+)"
     }
   ]
 }
